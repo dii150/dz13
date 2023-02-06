@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.containerHeader {
+    background: rgba(255, 255, 255, 0.7);
+    max-width: 1050px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 130px;
+    right: 130px;
+    z-index: 1;
+}
+
+.headerP {
+    font-family: 'Tourney', cursive;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.headerUl {
+    display: flex;
+    justify-content: space-between;
+
+    font-family: 'Staatliches', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.headerUl li:first-child::after {
+    content: "/";
+    margin: 0 10px;
+}
+
+
+.header svg {
+    right: 0;
+    padding-left: 30%;
+}
+
+.header a:hover {
+    text-shadow: 0 0 3px gray;
+    transition: 100ms ease-in-out;
+}
+
+h1 {
+    font-family: 'Roboto', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    position: relative;
+}
+
+.heading {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.heading span {
+    width: 100px;
+    height: 8px;
+    background: black;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    height: 120vh;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+
+.flipCards {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-rows: repeat(2, 180px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    perspective: 1000px;
+    border-top: 1px lightgrey solid;
+    border-bottom: 1px lightgrey solid;
+}
+
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 8px;
+}
+
+.flipCardItem:hover .flip-card-inner {
+    transform: rotateX(180deg);
+}
+
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    transform: rotateY( 180deg );
+}
+
+.flip-card-back img {
+    transform: rotate(180deg);
+}
+

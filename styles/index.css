@@ -1,0 +1,187 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+body {
+    background-image: url("../image/bg-picture.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: right;
+    background-position-y: center;
+    background-size: 530px 600px;
+}
+
+.containerHeader {
+    background: rgba(255, 255, 255, 0.7);
+    max-width: 1050px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 130px;
+    right: 130px;
+    z-index: 1;
+}
+
+.headerP {
+    font-family: 'Tourney', cursive;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.headerUl {
+    display: flex;
+    justify-content: space-between;
+
+    font-family: 'Staatliches', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.headerUl li:first-child::after {
+    content: "/";
+    margin: 0 10px;
+}
+
+
+.header svg {
+    right: 0;
+    padding-left: 30%;
+}
+
+.header a:hover {
+    text-shadow: 0 0 3px gray;
+    transition: 100ms ease-in-out;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 120px 130px 0;
+}
+
+main {
+    width: 60%;
+    padding-top: 10px;
+}
+
+aside {
+}
+
+.sideMenu {
+
+    position: sticky;
+    top: 80px;
+}
+
+.sideMenu__item {
+    font-family: 'Francois One', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    border-bottom: 1px lightgrey solid;
+}
+
+.sideMenu a:hover {
+    text-shadow: 1px 1px 5px gray;
+    transition: 100ms ease-in-out;
+}
+
+.container {
+}
+
+.textHeader {
+    display: flex;
+    align-items: start;
+    margin-bottom: 40px;
+    height: 53px;
+    gap: 10px;
+}
+
+.textHeader h2 {
+    font-family: 'Francois One', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    align-self: center;
+
+}
+
+.textHeader span {
+    font-family: 'Farro', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #000000;
+}
+
+section {
+    margin-bottom: 70px;
+}
+
+section p {
+    font-family: 'PT Sans', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+}
+
+.textHeader {
+    position: relative;
+}
+
+
+.section .textHeader::before {
+    content: '';
+    position: absolute;
+    background: black;
+    left: 0;
+    top: -30px;
+    width: 100px;
+    height: 8px;
+}
+
+.sectionThree p:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.sectionFour p:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.sectionThree mark {
+    background-color: lightgrey;
+}
